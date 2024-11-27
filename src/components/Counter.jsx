@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
+import "./counter.css";
+
 const Counter = (props) => {
   const [counter, setCounter] = useState(0);
 
@@ -21,11 +23,11 @@ const Counter = (props) => {
   };
 
   return (
-    <div>
-      <button onClick={increase}>+</button>
-      {counter}
-      <button onClick={decrease}>-</button>
-    </div>
+      <div>
+          <button onClick={increase}>+</button>
+          <span className="counter">{counter}</span>
+          <button onClick={decrease}>-</button>
+      </div>
   );
 };
 

@@ -1,2 +1,3 @@
-.counter-group-generator > {
+.counter-group-generator * {
+    margin: 5px;
 }
