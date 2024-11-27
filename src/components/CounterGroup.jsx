@@ -1,10 +1,10 @@
 import Counter from "./Counter";
 
 const CounterGroup = (props) => {
-  const { size } = props;
+  const { size, setSum } = props;
 
-  const counters = Array.from({ length: size }).map(() => (
-    <Counter id={`${Math.random()}`} key={`${Math.random()}`} />
+  const counters = Array.from({ length: size }).map((_, i) => (
+      <Counter key={i} setSum={setSum} size={size} />
   ));
 
   return <div>{counters}</div>;
