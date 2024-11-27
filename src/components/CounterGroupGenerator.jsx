@@ -3,11 +3,12 @@ import { useState } from "react";
 import "./countergroupGenerator.css";
 
 const CounterGroupGenerator = (props) => {
-  const [size, setSize] = useState();
+  const [size, setSize] = useState(0);
 
   const { setSize: setGlobalSize } = props;
 
   const handleChange = (event) => {
+    event.target.value = Math.min(Math.max(0, event.target.value), 20);
     setSize(event.target.value);
   };
 
@@ -18,13 +19,7 @@ const CounterGroupGenerator = (props) => {
   return (
     <div className="counter-group-generator">
       <span>Size:</span>
-      <input
-        min={0}
-        max={20}
-        type="number"
-        value={size}
-        onChange={handleChange}
-      ></input>
+      <input type="number" value={size} onChange={handleChange}></input>
       <button onClick={handleReset}>reset</button>
     </div>
   );
