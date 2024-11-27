@@ -1,12 +1,8 @@
-import './productItem.css';
+import "./productItem.css";
 
-const ProductItem = () => {
-    const productItem = {
-        name: "Football",
-        price: 49.99,
-        status: false
-    }
-    
+const ProductItem = (props) => {
+    const { productItem } = props;
+
     return (
         <div className="product-item-wrapper">
             <span>{productItem.name}</span>
@@ -14,6 +10,6 @@ const ProductItem = () => {
             <span>{productItem.status ? "In stock" : "Out of stock"}</span>
         </div>
     );
-}
+};
 
 export default ProductItem;

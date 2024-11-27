@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import ProductItem  from './components/ProductItem';
+import logo from "./logo.svg";
+import "./App.css";
+import ProductCategory from "./components/ProductCategory";
 
 function App() {
-  return (
-    <div className="App">
-      <ProductItem />
-    </div>
-  );
+    return (
+        <div className="App">
+            <ProductCategory />
+        </div>
+    );
 }
 
 export default App;
