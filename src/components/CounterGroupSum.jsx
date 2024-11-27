@@ -1,9 +1,7 @@
-import { useEffect } from "react";
-
 const CounterGroupSum = (props) => {
-  const { sum, setSum, size } = props;
+    const { sum } = props;
 
-  return <div>sum: {sum}</div>;
+    return <div>sum: {sum}</div>;
 };
 
 export default CounterGroupSum;
